@@ -1,351 +1,351 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Menu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
-<style>
-:root {
---bg: #f7f2ed;
---bg-soft: #fbf8f5;
---card: rgba(255, 255, 255, 0.92);
---text: #1f1a17;
---muted: #746a63;
---primary: #b53122;
---primary-dark: #8f2217;
---line: rgba(181, 49, 34, 0.12);
---shadow: 0 12px 35px rgba(38, 27, 19, 0.08);
---radius: 24px;
---radius-sm: 16px;
---max: 1180px;
-}
+  <style>
+    :root {
+      --bg: #f7f2ed;
+      --bg-soft: #fbf8f5;
+      --card: rgba(255, 255, 255, 0.92);
+      --text: #1f1a17;
+      --muted: #746a63;
+      --primary: #b53122;
+      --primary-dark: #8f2217;
+      --line: rgba(181, 49, 34, 0.12);
+      --shadow: 0 12px 35px rgba(38, 27, 19, 0.08);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --max: 1180px;
+    }
 
-* {
-box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-html {
-scroll-behavior: smooth;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-margin: 0;
-font-family: "Manrope", sans-serif;
-color: var(--text);
-background:
-radial-gradient(circle at top left, rgba(181, 49, 34, 0.10), transparent 28%),
-radial-gradient(circle at top right, rgba(181, 49, 34, 0.08), transparent 24%),
-linear-gradient(180deg, #fbf7f3 0%, var(--bg) 100%);
-}
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(181, 49, 34, 0.10), transparent 28%),
+        radial-gradient(circle at top right, rgba(181, 49, 34, 0.08), transparent 24%),
+        linear-gradient(180deg, #fbf7f3 0%, var(--bg) 100%);
+    }
 
-img {
-max-width: 100%;
-display: block;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-a {
-color: inherit;
-text-decoration: none;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.container {
-width: min(var(--max), calc(100% - 32px));
-margin: 0 auto;
-}
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-.hero {
-padding: 34px 0 18px;
-}
+    .hero {
+      padding: 34px 0 18px;
+    }
 
-.hero-box {
-position: relative;
-overflow: hidden;
-background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(255,255,255,0.88));
-border: 1px solid rgba(181, 49, 34, 0.10);
-border-radius: 30px;
-box-shadow: var(--shadow);
-padding: 34px 26px 28px;
-}
+    .hero-box {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(255,255,255,0.88));
+      border: 1px solid rgba(181, 49, 34, 0.10);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      padding: 34px 26px 28px;
+    }
 
-.hero-box::before {
-content: "";
-position: absolute;
-inset: auto -80px -80px auto;
-width: 220px;
-height: 220px;
-background: radial-gradient(circle, rgba(181,49,34,0.12), transparent 65%);
-pointer-events: none;
-}
+    .hero-box::before {
+      content: "";
+      position: absolute;
+      inset: auto -80px -80px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(181,49,34,0.12), transparent 65%);
+      pointer-events: none;
+    }
 
-.hero-top {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 18px;
-margin-bottom: 20px;
-flex-wrap: wrap;
-}
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
 
-.logo-wrap {
-background: #fff;
-border: 1px solid rgba(181, 49, 34, 0.12);
-border-radius: 20px;
-padding: 12px;
-box-shadow: 0 10px 24px rgba(0,0,0,0.05);
-}
+    .logo-wrap {
+      background: #fff;
+      border: 1px solid rgba(181, 49, 34, 0.12);
+      border-radius: 20px;
+      padding: 12px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+    }
 
-.logo-wrap img {
-max-height: 155px;
-width: auto;
-object-fit: contain;
-}
+    .logo-wrap img {
+      max-height: 155px;
+      width: auto;
+      object-fit: contain;
+    }
 
-.eyebrow {
-display: inline-block;
-font-size: 0.78rem;
-letter-spacing: 0.16em;
-text-transform: uppercase;
-color: var(--primary);
-font-weight: 800;
-margin-bottom: 10px;
-}
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
 
-h1 {
-font-family: "Playfair Display", serif;
-font-size: clamp(2.4rem, 5vw, 4.2rem);
-line-height: 0.98;
-margin: 0 0 12px;
-text-align: center;
-}
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 0.98;
+      margin: 0 0 12px;
+      text-align: center;
+    }
 
-.hero-subtitle {
-max-width: 760px;
-margin: 0 auto;
-text-align: center;
-color: var(--muted);
-font-size: 1.03rem;
-line-height: 1.7;
-}
+    .hero-subtitle {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.03rem;
+      line-height: 1.7;
+    }
 
-.quick-info {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-gap: 10px;
-margin-top: 24px;
-}
+    .quick-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
 
-.quick-info span {
-padding: 10px 14px;
-border-radius: 999px;
-background: rgba(181, 49, 34, 0.07);
-border: 1px solid rgba(181, 49, 34, 0.10);
-color: var(--primary-dark);
-font-size: 0.92rem;
-font-weight: 700;
-}
+    .quick-info span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(181, 49, 34, 0.07);
+      border: 1px solid rgba(181, 49, 34, 0.10);
+      color: var(--primary-dark);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
 
-.menu-nav-wrap {
-position: sticky;
-top: 0;
-z-index: 10;
-padding: 12px 0 6px;
-backdrop-filter: blur(10px);
-background: linear-gradient(180deg, rgba(247,242,237,0.88), rgba(247,242,237,0.62));
-}
+    .menu-nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 12px 0 6px;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(247,242,237,0.88), rgba(247,242,237,0.62));
+    }
 
-.menu-nav {
-display: flex;
-gap: 10px;
-overflow-x: auto;
-padding: 6px 2px 4px;
-scrollbar-width: none;
-}
+    .menu-nav {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 6px 2px 4px;
+      scrollbar-width: none;
+    }
 
-.menu-nav::-webkit-scrollbar {
-display: none;
-}
+    .menu-nav::-webkit-scrollbar {
+      display: none;
+    }
 
-.menu-nav a {
-white-space: nowrap;
-padding: 12px 16px;
-border-radius: 999px;
-background: rgba(255,255,255,0.88);
-border: 1px solid rgba(181, 49, 34, 0.12);
-box-shadow: 0 8px 18px rgba(0,0,0,0.04);
-font-weight: 700;
-color: var(--primary-dark);
-transition: transform 0.2s ease, background 0.2s ease;
-}
+    .menu-nav a {
+      white-space: nowrap;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(181, 49, 34, 0.12);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+      font-weight: 700;
+      color: var(--primary-dark);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
 
-.menu-nav a:hover {
-transform: translateY(-2px);
-background: #fff;
-}
+    .menu-nav a:hover {
+      transform: translateY(-2px);
+      background: #fff;
+    }
 
-main {
-padding: 18px 0 54px;
-}
+    main {
+      padding: 18px 0 54px;
+    }
 
-.menu-grid {
-display: grid;
-grid-template-columns: repeat(12, 1fr);
-gap: 22px;
-}
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 22px;
+    }
 
-.section-card {
-grid-column: span 12;
-background: var(--card);
-border: 1px solid rgba(181, 49, 34, 0.10);
-border-radius: var(--radius);
-box-shadow: var(--shadow);
-padding: 26px 22px;
-scroll-margin-top: 90px;
-position: relative;
-overflow: hidden;
-}
+    .section-card {
+      grid-column: span 12;
+      background: var(--card);
+      border: 1px solid rgba(181, 49, 34, 0.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px 22px;
+      scroll-margin-top: 90px;
+      position: relative;
+      overflow: hidden;
+    }
 
-.section-card::after {
-content: "";
-position: absolute;
-top: 0;
-right: 0;
-width: 120px;
-height: 120px;
-background: radial-gradient(circle, rgba(181,49,34,0.08), transparent 70%);
-pointer-events: none;
-}
+    .section-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(181,49,34,0.08), transparent 70%);
+      pointer-events: none;
+    }
 
-.section-header {
-margin-bottom: 18px;
-padding-bottom: 14px;
-border-bottom: 1px solid var(--line);
-}
+    .section-header {
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
 
-.section-header h2 {
-font-family: "Playfair Display", serif;
-font-size: clamp(1.5rem, 2.5vw, 2rem);
-color: var(--primary);
-margin: 0 0 6px;
-line-height: 1.05;
-}
+    .section-header h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--primary);
+      margin: 0 0 6px;
+      line-height: 1.05;
+    }
 
-.section-header p {
-margin: 0;
-color: var(--muted);
-font-size: 0.98rem;
-line-height: 1.65;
-max-width: 800px;
-}
+    .section-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      max-width: 800px;
+    }
 
-.items {
-display: grid;
-gap: 14px;
-}
+    .items {
+      display: grid;
+      gap: 14px;
+    }
 
-.menu-item {
-padding: 14px 0;
-border-bottom: 1px dashed rgba(181, 49, 34, 0.16);
-}
+    .menu-item {
+      padding: 14px 0;
+      border-bottom: 1px dashed rgba(181, 49, 34, 0.16);
+    }
 
-.menu-item:last-child {
-border-bottom: none;
-padding-bottom: 2px;
-}
+    .menu-item:last-child {
+      border-bottom: none;
+      padding-bottom: 2px;
+    }
 
-.item-top {
-display: grid;
-grid-template-columns: 1fr auto;
-gap: 12px;
-align-items: start;
-}
+    .item-top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: start;
+    }
 
-.item-name {
-font-size: 1.08rem;
-font-weight: 800;
-line-height: 1.35;
-}
+    .item-name {
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
 
-.item-price {
-font-size: 1.05rem;
-font-weight: 800;
-color: var(--primary-dark);
-white-space: nowrap;
-padding-left: 12px;
-}
+    .item-price {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      white-space: nowrap;
+      padding-left: 12px;
+    }
 
-.item-desc {
-margin-top: 5px;
-color: var(--muted);
-line-height: 1.55;
-font-size: 0.96rem;
-max-width: 900px;
-}
+    .item-desc {
+      margin-top: 5px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.96rem;
+      max-width: 900px;
+    }
 
-.note-box {
-margin-top: 16px;
-background: rgba(181, 49, 34, 0.06);
-border: 1px solid rgba(181, 49, 34, 0.12);
-border-radius: 18px;
-padding: 14px 16px;
-color: var(--primary-dark);
-font-weight: 700;
-line-height: 1.6;
-}
+    .note-box {
+      margin-top: 16px;
+      background: rgba(181, 49, 34, 0.06);
+      border: 1px solid rgba(181, 49, 34, 0.12);
+      border-radius: 18px;
+      padding: 14px 16px;
+      color: var(--primary-dark);
+      font-weight: 700;
+      line-height: 1.6;
+    }
 
-.footer-space {
-height: 12px;
-}
+    .footer-space {
+      height: 12px;
+    }
 
-@media (min-width: 860px) {
-.span-6 {
-grid-column: span 6;
-}
+    @media (min-width: 860px) {
+      .span-6 {
+        grid-column: span 6;
+      }
 
-.span-4 {
-grid-column: span 4;
-}
+      .span-4 {
+        grid-column: span 4;
+      }
 
-.span-8 {
-grid-column: span 8;
-}
-}
+      .span-8 {
+        grid-column: span 8;
+      }
+    }
 
-@media (max-width: 680px) {
-.hero-box {
-padding: 26px 18px 22px;
-border-radius: 24px;
-}
+    @media (max-width: 680px) {
+      .hero-box {
+        padding: 26px 18px 22px;
+        border-radius: 24px;
+      }
 
-.section-card {
-padding: 22px 16px;
-}
+      .section-card {
+        padding: 22px 16px;
+      }
 
-.item-top {
-grid-template-columns: 1fr;
-gap: 4px;
-}
+      .item-top {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
 
-.item-price {
-padding-left: 0;
-}
+      .item-price {
+        padding-left: 0;
+      }
 
-.menu-nav a {
-padding: 11px 14px;
-font-size: 0.95rem;
-}
+      .menu-nav a {
+        padding: 11px 14px;
+        font-size: 0.95rem;
+      }
 
-.quick-info span {
-font-size: 0.86rem;
-}
-}
+      .quick-info span {
+        font-size: 0.86rem;
+      }
+    }
 
-.new-badge{
+    .new-badge{
 display:inline-block;
 margin-left:8px;
 padding:2px 8px;
@@ -356,558 +356,574 @@ font-size:.8rem;
 font-weight:800;
 vertical-align:middle;
 }
-
-.titolo-home {
-font-size: 2rem;
-text-align: center;
-display: block;
-width: 100%;
-margin bottom: 20px;
+    
+ .titolo-home {
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin bottom: 20px;
 }
-</style>
+  </style>
 </head>
 <body>
 
-<header class="hero">
-<div class="container">
-<div class="hero-box">
-<div class="hero-top">
-<div class="logo-wrap">
-<img src="photo-output.png" alt="Logo del ristorante">
-</div>
-</div>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-box">
+        <div class="hero-top">
+          <div class="logo-wrap">
+            <img src="photo-output.png" alt="Logo del ristorante">
+          </div>
+        </div>
 
-<h1 class="eyebrow titolo-home">Benvenuti da Amici di Forchetta</h1>
-<p class="hero-subtitle">
-Qui la tavola è un luogo d'incontro: materie prime scelte con cura, ricette che rispettano la tradizione e il calore di Leonardo e Mariano per farvi sentire a casa. Buon appetito.
-</p>
+       <h1 class="eyebrow titolo-home">Benvenuti da Amici di Forchetta</h1>
+        <p class="hero-subtitle">
+           Qui la tavola è un luogo d'incontro: materie prime scelte con cura, ricette che rispettano la tradizione e il calore di Leonardo e Mariano per farvi sentire a casa. Buon appetito.
+        </p>
 
-<div class="quick-info">
-<span>Tradizione</span>
-<span>Carne & Grill</span>
-<span>Panini Gourmet</span>
-<span>Dolci</span>
-</div>
-</div>
-</div>
-</header>
+        <div class="quick-info">
+          <span>Tradizione</span>
+          <span>Carne & Grill</span>
+          <span>Panini Gourmet</span>
+          <span>Dolci</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<div class="menu-nav-wrap">
-<div class="container">
-<nav class="menu-nav">
-<a href="#antipasti">Antipasti</a>
-<a href="#fritti">Fritti</a>
-<a href="#primi">Primi</a>
-<a href="#secondi">Secondi</a>
-<a href="#contorni">Contorni</a>
-<a href="#panini">Panini</a>
-<a href="#dolci">Dolci</a>
-<a href="#liquori">Liquori</a>
-<a href="#bevande">Bevande</a>
-</nav>
-</div>
-</div>
+  <div class="menu-nav-wrap">
+    <div class="container">
+      <nav class="menu-nav">
+        <a href="#antipasti">Antipasti</a>
+        <a href="#fritti">Fritti</a>
+        <a href="#primi">Primi</a>
+        <a href="#secondi">Secondi</a>
+        <a href="#contorni">Contorni</a>
+        <a href="#panini">Panini</a>
+        <a href="#dolci">Dolci</a>
+        <a href="#liquori">Liquori</a>
+        <a href="#bevande">Bevande</a>
+      </nav>
+    </div>
+  </div>
 
-<main>
-<div class="container">
-<div class="menu-grid">
+  <main>
+    <div class="container">
+      <div class="menu-grid">
 
-<section id="antipasti" class="section-card span-6">
-<div class="section-header">
-<h2>Antipasti</h2>
-<p>Taglieri, tartare e piatti d’apertura pensati per iniziare con gusto e personalità.</p>
+        <section id="antipasti" class="section-card span-6">
+          <div class="section-header">
+            <h2>Antipasti</h2>
+            <p>Taglieri, tartare e piatti d’apertura pensati per iniziare con gusto e personalità.</p>
+          </div>
+
+          <div class="items">
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Tagliere della Compagnia</div>
+                <div class="item-price">€ 25,00</div>
+              </div>
+              <div class="item-desc">Misto di salumi e formaggi con confetture e frutta secca</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Caprese Impazzita<span class="new-badge">*NOVITÀ*</span>
 </div>
+                <div class="item-price">€ 12,00</div>
+              </div>
+            </div>
 
-<div class="items">
-<div class="menu-item">
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Tagliere dell’Amicizia</div>
+                <div class="item-price">€ 16,00</div>
+              </div>
+              <div class="item-desc">Misto di salumi</div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Tagliere della Forchetta</div>
+                <div class="item-price">€ 15,00</div>
+              </div>
+              <div class="item-desc">Misto di formaggi</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Mozzarella di Bufala Campana</div>
+                <div class="item-price">€ 6,00</div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Prosciutto e Mozzarella</div>
+                <div class="item-price">€ 9,00</div>
+              </div>
+              <p>Prosciutto crudo con mozzarella di bufala campana </p>
+          </div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Tartare Nuda e Cruda</div>
+                <div class="item-price">€ 10,00</div>
+              </div>
+              <div class="item-desc">Carne di vitello con nocciole tostate e senape con vele di pane</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Tartare dello Chef</div>
+                <div class="item-price">€ 15,00</div>
+              </div>
+              <div class="item-desc">Carne di vitello con olive taggiasche, pomodoro confit, cappero, stracciata di bufala, noci secche</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Tartare di Mariano</div>
+                <div class="item-price">€ 12,00</div>
+              </div>
+              <div class="item-desc">Carne di vitello con frutta di stagione o esotica secondo disponibilità</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Fiore di Zucca in Tempura</div>
+                <div class="item-price">€ 7,00</div>
+              </div>
+              <div class="item-desc">2 fiori ripieni di ricotta mantecata, salame Napoli, sul letto di misticanza con pesto di basilico e zucca in saor</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Sformatino Parmigiana</div>
+                <div class="item-price">€ 6,00</div>
+              </div>
+              <div class="item-desc">Melanzane fritte, pomodoro, provola e basilico</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Millefoglie di Verdure</div>
+                <div class="item-price">€ 6,50</div>
+              </div>
+              <div class="item-desc">Melanzane, zucchine, mozzarella, prosciutto cotto, pesto di basilico, sfoglia di mais croccante</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="fritti" class="section-card span-6">
+          <div class="section-header">
+            <h2>Fritti</h2>
+            <p>La parte più sfiziosa del menu: croccantezza, gusto e comfort food da condividere.</p>
+          </div>
+
+          <div class="items">
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Frittatina Amici di Forchetta</div>
+                <div class="item-price">€ 3,50</div>
+              </div>
+              <div class="item-desc">Salsiccia e piselli</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Palla di Riso</div>
+                <div class="item-price">€ 3,50</div>
+              </div>
+              <div class="item-desc">Al ragù con cuore filante di mozzarella</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Sfera di Patate<span class="new-badge">*NOVITÀ*</span>
+</div>
+                <div class="item-price">€ 12,00</div>
+              </div>
+              <div class="item-desc">Con cuore blu di bufala, su vellutata fredda di zucchine e menta, trucioli di pancetta.</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Arancina di Cipolla Caramellata<span class="new-badge">*NOVITÀ*</span>
+</div>
+                <div class="item-price">€ 6,00</div>
+            </div>
+            <div class="item-desc">Con cuore di cheddar,  su vellutata di coulis di pomodori.</div>
+          </div>
+
+            
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Polpetta di Melanzane</div>
+                <div class="item-price">€ 4,00</div>
+              </div>
+              <div class="item-desc">2 polpette di melanzane servite sul letto di misticanza e colata di parmigiano fuso</div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Polpetta Classica al Sugo</div>
+                <div class="item-price">€ 6,00</div>
+              </div>
+              <div class="item-desc">5 polpettine servite con pomodoro e formaggio grana</div>
+            </div>
+
+            <div class="menu-item">
 <div class="item-top">
-<div class="item-name">Tagliere della Compagnia</div>
-<div class="item-price">€ 25,00</div>
+<div class="item-name">Polpletta Fritta<span class="new-badge">*NOVITÀ*</span>
 </div>
-<div class="item-desc">Misto di salumi e formaggi con confetture e frutta secca</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Tagliere dell’Amicizia</div>
-<div class="item-price">€ 16,00</div>
-</div>
-<div class="item-desc">Misto di salumi</div>
-</div>
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Tagliere della Forchetta</div>
-<div class="item-price">€ 15,00</div>
-</div>
-<div class="item-desc">Misto di formaggi</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Mozzarella di Bufala Campana</div>
-<div class="item-price">€ 6,00</div>
-</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Prosciutto e Mozzarella</div>
-<div class="item-price">€ 9,00</div>
-</div>
-<p>Prosciutto crudo con mozzarella di bufala campana </p>
-</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Tartare Nuda e Cruda</div>
-<div class="item-price">€ 10,00</div>
-</div>
-<div class="item-desc">Carne di vitello con nocciole tostate e senape con vele di pane</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Tartare dello Chef</div>
-<div class="item-price">€ 15,00</div>
-</div>
-<div class="item-desc">Carne di vitello con olive taggiasche, pomodoro confit, cappero, stracciata di bufala, noci secche</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Tartare di Mariano</div>
-<div class="item-price">€ 12,00</div>
-</div>
-<div class="item-desc">Carne di vitello con frutta di stagione o esotica secondo disponibilità</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Fiore di Zucca in Tempura</div>
-<div class="item-price">€ 7,00</div>
-</div>
-<div class="item-desc">2 fiori ripieni di ricotta mantecata, salame Napoli, sul letto di misticanza con pesto di basilico e zucca in saor</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Sformatino Parmigiana</div>
-<div class="item-price">€ 6,00</div>
-</div>
-<div class="item-desc">Melanzane fritte, pomodoro, provola e basilico</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Millefoglie di Verdure</div>
-<div class="item-price">€ 6,50</div>
-</div>
-<div class="item-desc">Melanzane, zucchine, mozzarella, prosciutto cotto, pesto di basilico, sfoglia di mais croccante</div>
-</div>
-</div>
-</section>
-
-<section id="fritti" class="section-card span-6">
-<div class="section-header">
-<h2>Fritti</h2>
-<p>La parte più sfiziosa del menu: croccantezza, gusto e comfort food da condividere.</p>
-</div>
-
-<div class="items">
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Frittatina Amici di Forchetta</div>
-<div class="item-price">€ 3,50</div>
-</div>
-<div class="item-desc">Salsiccia e piselli</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Palla di Riso</div>
-<div class="item-price">€ 3,50</div>
-</div>
-<div class="item-desc">Al ragù con cuore filante di mozzarella</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Sfera di Patate<span class="new-badge">*NOVITÀ*</span>
-</div>
-<div class="item-price">€ 12,00</div>
-</div>
-<div class="item-desc">Con cuore blu di bufala, su vellutata fredda di zucchine e menta, trucioli di pancetta.</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Arancina di Cipolla Caramellata</div>
-<div class="item-price">€ 6,00</div>
-</div>
-<div class="item-desc">Con cuore di cheddar,  su vellutata di coulis di pomodori.</div>
-</div>
-
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Polpetta di Melanzane</div>
-<div class="item-price">€ 4,00</div>
-</div>
-<div class="item-desc">2 polpette di melanzane servite sul letto di misticanza e colata di parmigiano fuso</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Polpetta Classica al Sugo</div>
-<div class="item-price">€ 6,00</div>
-</div>
-<div class="item-desc">5 polpettine servite con pomodoro e formaggio grana</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Polpetta fritta</div>
 <div class="item-price">€ 8,00</div>
 </div>
 <div class="item-desc">Accompagnata con salsa verde di prezzemolo, pane, capperi e acciuga.</div>
 </div>
+            
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">PataLeo</div>
+                <div class="item-price">€ 6,50</div>
+              </div>
+              <div class="item-desc">Patata classica fritta con salsiccia e salsa provolone</div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">PataLeo</div>
-<div class="item-price">€ 6,50</div>
-</div>
-<div class="item-desc">Patata classica fritta con salsiccia e salsa provolone</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Patamao</div>
+                <div class="item-price">€ 5,50</div>
+              </div>
+              <div class="item-desc">Patata classica fritta con wurstel e salsa cheddar</div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Patamao</div>
-<div class="item-price">€ 5,50</div>
-</div>
-<div class="item-desc">Patata classica fritta con wurstel e salsa cheddar</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Patata Paprika</div>
+                <div class="item-price">€ 4,00</div>
+              </div>
+              <div class="item-desc">Patata fritta a spicchi aromatizzata alla paprika dolce</div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Patata Paprika</div>
-<div class="item-price">€ 4,00</div>
-</div>
-<div class="item-desc">Patata fritta a spicchi aromatizzata alla paprika dolce</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Patata Dippers</div>
+                <div class="item-price">€ 5,00</div>
+              </div>
+              <div class="item-desc">Patata fritta a forma concava e con buccia</div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Patata Dippers</div>
-<div class="item-price">€ 5,00</div>
-</div>
-<div class="item-desc">Patata fritta a forma concava e con buccia</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Montanarine dello Chef</div>
+                <div class="item-price">€ 9,00</div>
+              </div>
+              <div class="item-desc">2 pz stracciata di bufala e pomodoro e 2 pz genovese e grana</div>
+            </div>
+          </div>
+        </section>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Montanarine dello Chef</div>
-<div class="item-price">€ 9,00</div>
-</div>
-<div class="item-desc">2 pz stracciata di bufala e pomodoro e 2 pz genovese e grana</div>
-</div>
-</div>
-</section>
+        <section id="primi" class="section-card span-6">
+          <div class="section-header">
+            <h2>Primi</h2>
+            <p>Piatti di pasta che uniscono tradizione, cremosità e sapori decisi.</p>
+          </div>
 
-<section id="primi" class="section-card span-6">
-<div class="section-header">
-<h2>Primi</h2>
-<p>Piatti di pasta che uniscono tradizione, cremosità e sapori decisi.</p>
-</div>
+          <div class="items">
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Ziti alla Genovese</div>
+                <div class="item-price">€ 11,00</div>
+              </div>
+              <div class="item-desc">Zito spezzato con parmigiano e muscolo di vitello</div>
+            </div>
+            </div>
 
-<div class="items">
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Ziti alla Genovese</div>
-<div class="item-price">€ 11,00</div>
+          <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Carbonara agli Agrumi<span class="new-badge">*NOVITÀ*</span>
 </div>
-<div class="item-desc">Zito spezzato con parmigiano e muscolo di vitello</div>
-</div>
-</div>
+                <div class="item-price">€ 12,00</div>
+              </div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Pasta Patate e Provola</div>
-<div class="item-price">€ 11,00</div>
-</div>
-<div class="item-desc">
-Pasta mista con patate in fondo aromatico di sedano e carota, con pomodorini e cuore di provola, pesto di basilico home made bacon croccante
-</div>
-</div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Spaghettone alla Nerano</div>
-<div class="item-price">€ 11,00</div>
-</div>
-<div class="item-desc">Spaghetto con zucchine fritte e provolone</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Spaghettone Cacio e Pepe</div>
-<div class="item-price">€ 9,00</div>
-</div>
-<div class="item-desc">Con crema di formaggio e pepe</div>
+          <div class="menu-item">
+  <div class="item-top">
+    <div class="item-name">Pasta Patate e Provola</div>
+    <div class="item-price">€ 11,00</div>
+  </div>
+  <div class="item-desc">
+    Pasta mista con patate in fondo aromatico di sedano e carota, con pomodorini e cuore di provola, pesto di basilico home made bacon croccante
+  </div>
 </div>
 
 <div class="menu-item">
-<div class="item-top">
-<div class="item-name">Spaghettone Carbonara</div>
-<div class="item-price">€ 9,00</div>
-</div>
-<div class="item-desc">Con uova, Pecorino Romano e guanciale croccante</div>
-</div>
-
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Rigatone Amatriciana</div>
-<div class="item-price">€ 9,00</div>
-</div>
-<div class="item-desc">Con guanciale croccante, pomodoro e Pecorino Romano</div>
-</div>
-</div>
-
-<div class="note-box">
-Per i più golosi si propone la versione da 150 gr di pasta con un supplemento di € 5,00.
-</div>
-</section>
-
-<section id="secondi" class="section-card span-6">
-<div class="section-header">
-<h2>Secondi</h2>
-<p>Carne, griglia e piatti completi per chi cerca sapore pieno e sostanza.</p>
-</div>
-
-<div class="items">
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Tagliata di Vitello con Contorno</div>
-<div class="item-price">€ 18,00</div>
-</div>
+  <div class="item-top">
+    <div class="item-name">Spaghettone alla Nerano</div>
+    <div class="item-price">€ 11,00</div>
+  </div>
+  <div class="item-desc">Spaghetto con zucchine fritte e provolone</div>
 </div>
 
 <div class="menu-item">
+  <div class="item-top">
+    <div class="item-name">Spaghettone Cacio e Pepe</div>
+    <div class="item-price">€ 9,00</div>
+  </div>
+  <div class="item-desc">Con crema di formaggio e pepe</div>
+</div>
+
+<div class="menu-item">
+  <div class="item-top">
+    <div class="item-name">Spaghettone Carbonara</div>
+    <div class="item-price">€ 9,00</div>
+  </div>
+  <div class="item-desc">Con uova, Pecorino Romano e guanciale croccante</div>
+</div>
+
+<div class="menu-item">
+  <div class="item-top">
+    <div class="item-name">Rigatone Amatriciana</div>
+    <div class="item-price">€ 9,00</div>
+  </div>
+  <div class="item-desc">Con guanciale croccante, pomodoro e Pecorino Romano</div>
+</div>
+</div>
+
+          <div class="note-box">
+            Per i più golosi si propone la versione da 150 gr di pasta con un supplemento di € 5,00.
+          </div>
+        </section>
+
+        <section id="secondi" class="section-card span-6">
+          <div class="section-header">
+            <h2>Secondi</h2>
+            <p>Carne, griglia e piatti completi per chi cerca sapore pieno e sostanza.</p>
+          </div>
+
+          <div class="items">
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Tagliata di Vitello con Contorno</div>
+                <div class="item-price">€ 18,00</div>
+              </div>
+            </div>
+
+<div class="menu-item">
 <div class="item-top">
-<div class="item-name">Carpaccio di maialino nero casertano </div>
+<div class="item-name">Carpaccio di Maialino Nero Casertano<span class="new-badge">*NOVITÀ*</span>
+</div>
 <div class="item-price">€ 10,00</div>
 </div>
 <div class="item-desc">Cotto a basse temperature. Adagiato su salsa tonnata, misticanza, capperi e olive, frutta di stagione, pomodoro confit</div>
 </div>
-
+            
 <div class="menu-item">
 <div class="item-top">
-<div class="item-name">Medaglione di Maiale con chips</div>
+<div class="item-name">Medaglione di Maiale con chips<span class="new-badge">*NOVITÀ*</span>
+</div>
 <div class="item-price">€ 18,00</div>
 </div>
 <div class="item-desc">Scottato in padella, su vellutata di sedano rapa e Demi-Glace di vitello e misticanza</div>
 </div>
+            
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Tagliata di Pollo con Contorno</div>
+                <div class="item-price">€ 14,00</div>
+              </div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Tagliata di Pollo con Contorno</div>
-<div class="item-price">€ 14,00</div>
-</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Cuberoll di Vitello con Contorno</div>
+                <div class="item-price">€ 20,00</div>
+              </div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Cuberoll di Vitello con Contorno</div>
-<div class="item-price">€ 20,00</div>
-</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Grigliata Mista</div>
+                <div class="item-price">€ 30,00</div>
+              </div>
+              <div class="item-desc">4 bombette di maiale, 2 salsicce dolci, 4 arrosticini, coppa di suino</div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Grigliata Mista</div>
-<div class="item-price">€ 30,00</div>
-</div>
-<div class="item-desc">4 bombette di maiale, 2 salsicce dolci, 4 arrosticini, coppa di suino</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Bombette di Maiale con Patate Fritte</div>
+                <div class="item-price">€ 12,00</div>
+              </div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Bombette di Maiale con Patate Fritte</div>
-<div class="item-price">€ 12,00</div>
-</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Arrosticini di Vitello con Patate Fritte</div>
+                <div class="item-price">€ 7,50</div>
+              </div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Arrosticini di Vitello con Patate Fritte</div>
-<div class="item-price">€ 7,50</div>
-</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Stracotto di Vitello con vellutata di patate, misticanza, chips di polenta</div>
+                <div class="item-price">€ 16,00</div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Stracotto di Vitello con vellutata di patate, misticanza, chips di polenta</div>
-<div class="item-price">€ 16,00</div>
-</div>
-</div>
-</div>
-</section>
+        <section id="contorni" class="section-card span-4">
+          <div class="section-header">
+            <h2>Contorni</h2>
+            <p>Da abbinare, condividere o scegliere come complemento perfetto al piatto principale.</p>
+          </div>
 
-<section id="contorni" class="section-card span-4">
-<div class="section-header">
-<h2>Contorni</h2>
-<p>Da abbinare, condividere o scegliere come complemento perfetto al piatto principale.</p>
-</div>
+          <div class="items">
+            <div class="menu-item"><div class="item-top"><div class="item-name">Cicoria Ripassata</div><div class="item-price">€ 4,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Scarola Saltata con capperi e olive nere</div><div class="item-price">€ 5,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Verdure Grigliate</div><div class="item-price">€ 5,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Patate al Forno</div><div class="item-price">€ 4,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Insalata Mista</div><div class="item-price">€ 4,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Patate Fritte</div><div class="item-price">€ 3,00</div></div></div>
+          </div>
+        </section>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Caprese Impazzita</div>
-<div class="item-price">€ 12,00</div>
-</div>
-<div class="items">
-<div class="menu-item"><div class="item-top"><div class="item-name">Cicoria Ripassata</div><div class="item-price">€ 4,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Scarola Saltata con capperi e olive nere</div><div class="item-price">€ 5,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Verdure Grigliate</div><div class="item-price">€ 5,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Patate al Forno</div><div class="item-price">€ 4,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Insalata Mista</div><div class="item-price">€ 4,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Patate Fritte</div><div class="item-price">€ 3,00</div></div></div>
-</div>
-</section>
+    <section id="panini" class="section-card span-8">
+          <div class="section-header">
+            <h2>Panini</h2>
+            <p>Una sezione più forte e più “wow”: ingredienti intensi, nomi riconoscibili e combinazioni che restano in testa.</p>
+          </div>
 
-<section id="panini" class="section-card span-8">
-<div class="section-header">
-<h2>Panini</h2>
-<p>Una sezione più forte e più “wow”: ingredienti intensi, nomi riconoscibili e combinazioni che restano in testa.</p>
-</div>
+          <div class="items">
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Carbopanino</div>
+                <div class="item-price">€ 11,00</div>
+              </div>
+              <div class="item-desc">Hamburger da 180 gr, cubotto di pecorino panato, carbocrema, guanciale croccante, servito in un panino nero ai carboni attivi</div>
+            </div>
 
-<div class="items">
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Carbopanino</div>
-<div class="item-price">€ 11,00</div>
-</div>
-<div class="item-desc">Hamburger da 180 gr, cubotto di pecorino panato, carbocrema, guanciale croccante, servito in un panino nero ai carboni attivi</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Matriciano</div>
+                <div class="item-price">€ 11,00</div>
+              </div>
+              <div class="item-desc">Hamburger da 180 gr, ristretto di pomodoro, provola, guanciale croccante, pecorino grattugiato</div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Matriciano</div>
-<div class="item-price">€ 11,00</div>
-</div>
-<div class="item-desc">Hamburger da 180 gr, ristretto di pomodoro, provola, guanciale croccante, pecorino grattugiato</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">CacioPanino</div>
+                <div class="item-price">€ 10,00</div>
+              </div>
+              <div class="item-desc">Hamburger da 180 gr, salsa cacio e pepe, misticanza, carbone attivo</div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">CacioPanino</div>
-<div class="item-price">€ 10,00</div>
-</div>
-<div class="item-desc">Hamburger da 180 gr, salsa cacio e pepe, misticanza, carbone attivo</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Parmipollo</div>
+                <div class="item-price">€ 12,00</div>
+              </div>
+              <div class="item-desc">Cotoletta di pollo panata, parmigiana di melanzane, pesto di basilico</div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Parmipollo</div>
-<div class="item-price">€ 12,00</div>
-</div>
-<div class="item-desc">Cotoletta di pollo panata, parmigiana di melanzane, pesto di basilico</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">Pulled Up</div>
+                <div class="item-price">€ 12,00</div>
+              </div>
+              <div class="item-desc">Pulled pork, patata al forno, provola, bacon croccante</div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Pulled Up</div>
-<div class="item-price">€ 12,00</div>
-</div>
-<div class="item-desc">Pulled pork, patata al forno, provola, bacon croccante</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">NicoBun</div>
+                <div class="item-price">€ 12,00</div>
+              </div>
+              <div class="item-desc">Hamburger da 180 gr, uovo occhio di bue, peperoni, provolone. Servito in un panino rosso</div>
+            </div>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">NicoBun</div>
-<div class="item-price">€ 12,00</div>
-</div>
-<div class="item-desc">Hamburger da 180 gr, uovo occhio di bue, peperoni, provolone. Servito in un panino rosso</div>
-</div>
+            <div class="menu-item">
+              <div class="item-top">
+                <div class="item-name">GreenBun</div>
+                <div class="item-price">€ 10,00</div>
+              </div>
+              <div class="item-desc">Mozzarella, verdure grigliate</div>
+            </div>
+          </div>
+    </section>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">GreenBun</div>
-<div class="item-price">€ 10,00</div>
-</div>
-<div class="item-desc">Mozzarella, verdure grigliate</div>
-</div>
-</div>
-</section>
+        <section id="dolci" class="section-card span-4">
+          <div class="section-header">
+            <h2>Dolci</h2>
+            <p>Il finale giusto: goloso, semplice e memorabile.</p>
+          </div>
 
-<section id="dolci" class="section-card span-4">
-<div class="section-header">
-<h2>Dolci</h2>
-<p>Il finale giusto: goloso, semplice e memorabile.</p>
-</div>
+         
+          <div class="items">
+            <div class="menu-item"><div class="item-top"><div class="item-name">Tiramilà</div><div class="item-price">€ 4,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Sfogliatella Scomposta<span class="new-badge">*NOVITÀ*</span>
+</div><div class="item-price">€ 9,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Vesuvio</div><div class="item-price">€ 5,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Cheese Twist</div><div class="item-price">€ 4,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Babagrill<span class="new-badge">*NOVITÀ*</span>
+</div><div class="item-price">€ 7,00</div></div></div>
+          </div> 
+          
+        </section>
 
-<div class="menu-item">
-<div class="item-top">
-<div class="item-name">Sfogliatella scomposta</div>
-<div class="item-price">€ 9,00</div>
-</div>
+        <section id="bevande" class="section-card span-4">
+          <div class="section-header">
+            <h2>Bevande</h2>
+            <p>Le scelte essenziali per accompagnare ogni portata.</p>
+          </div>
 
-<div class="items">
-<div class="menu-item"><div class="item-top"><div class="item-name">Tiramilà</div><div class="item-price">€ 4,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Vesuvio</div><div class="item-price">€ 5,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Cheese Twist</div><div class="item-price">€ 4,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Babagrill</div><div class="item-price">€ 7,00</div></div></div>
-</div>
-
-</section>
-
-<section id="bevande" class="section-card span-4">
-<div class="section-header">
-<h2>Bevande</h2>
-<p>Le scelte essenziali per accompagnare ogni portata.</p>
-</div>
-
-<div class="items">
-<div class="menu-item"><div class="item-top"><div class="item-name">Acqua Frizzante Ferrarelle</div><div class="item-price">€ 2,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Acqua Naturale</div><div class="item-price">€ 2,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Coca-Cola in vetro</div><div class="item-price">€ 3,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Fanta in vetro</div><div class="item-price">€ 3,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Sprite in vetro</div><div class="item-price">€ 3,00</div></div></div>
-</div>
-</section>
+          <div class="items">
+            <div class="menu-item"><div class="item-top"><div class="item-name">Acqua Frizzante Ferrarelle</div><div class="item-price">€ 2,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Acqua Naturale</div><div class="item-price">€ 2,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Coca-Cola in vetro</div><div class="item-price">€ 3,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Fanta in vetro</div><div class="item-price">€ 3,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Sprite in vetro</div><div class="item-price">€ 3,00</div></div></div>
+          </div>
+        </section>
 
 
 
-<section id="liquori" class="section-card span-4">
-<div class="section-header">
-<h2>Liquori</h2>
-<p>Chiusura classica, amari e distillati da fine pasto.</p>
-</div>
+        <section id="liquori" class="section-card span-4">
+          <div class="section-header">
+            <h2>Liquori</h2>
+            <p>Chiusura classica, amari e distillati da fine pasto.</p>
+          </div>
 
-<div class="items">
-<div class="menu-item"><div class="item-top"><div class="item-name">Montenegro</div><div class="item-price">€ 2,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Averna</div><div class="item-price">€ 2,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Ramazzotti</div><div class="item-price">€ 2,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Amaro del Capo</div><div class="item-price">€ 2,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Unicum Ramazzotti</div><div class="item-price">€ 2,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Jägermeister</div><div class="item-price">€ 2,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Amaro del Ciclista</div><div class="item-price">€ 2,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Genziana</div><div class="item-price">€ 2,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Amaro Amare</div><div class="item-price">€ 2,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Grappa Bonollo Amarone</div><div class="item-price">€ 5,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Grappa 903 Barrique</div><div class="item-price">€ 4,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Grappa Chiara Il Roggio</div><div class="item-price">€ 3,50</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Whisky</div><div class="item-price">€ 5,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Sambuca</div><div class="item-price">€ 3,00</div></div></div>
-<div class="menu-item"><div class="item-top"><div class="item-name">Liquore alla Liquirizia</div><div class="item-price">€ 3,50</div></div></div>
-</div>
-</section>
+          <div class="items">
+            <div class="menu-item"><div class="item-top"><div class="item-name">Montenegro</div><div class="item-price">€ 2,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Averna</div><div class="item-price">€ 2,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Ramazzotti</div><div class="item-price">€ 2,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Amaro del Capo</div><div class="item-price">€ 2,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Unicum Ramazzotti</div><div class="item-price">€ 2,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Jägermeister</div><div class="item-price">€ 2,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Amaro del Ciclista</div><div class="item-price">€ 2,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Genziana</div><div class="item-price">€ 2,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Amaro Amare</div><div class="item-price">€ 2,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Grappa Bonollo Amarone</div><div class="item-price">€ 5,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Grappa 903 Barrique</div><div class="item-price">€ 4,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Grappa Chiara Il Roggio</div><div class="item-price">€ 3,50</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Whisky</div><div class="item-price">€ 5,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Sambuca</div><div class="item-price">€ 3,00</div></div></div>
+            <div class="menu-item"><div class="item-top"><div class="item-name">Liquore alla Liquirizia</div><div class="item-price">€ 3,50</div></div></div>
+          </div>
+        </section>
 
-</div>
+      </div>
 
-<div class="footer-space"></div>
-</div>
-</main>
+      <div class="footer-space"></div>
+    </div>
+  </main>
 
 </body>
 </html>
